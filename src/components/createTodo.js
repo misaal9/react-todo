@@ -4,7 +4,7 @@ export default class CreateTodo extends React.Component {
     render() {
         return (
             <form onSubmit= { this.onCreateTodoHandler.bind(this) }>
-                <input type="text" ref="createTodo" placeholder="Enter new todo" />
+                <input type="text" ref="createTodoInput" placeholder="Enter new todo" />
                 <button>Create</button>
             </form>
         );
@@ -12,6 +12,14 @@ export default class CreateTodo extends React.Component {
 
     onCreateTodoHandler(e) {
         e.preventDefault();
-        console.info(this.refs.createTodo.value);
+        const task = this.refs.createTodoInput.value;
+
+        this.refs.createTodoInput.value = '';
+        
+        if (!task.trim()) {
+            return;
+        }
+
+        this.props.createTodo(task);
     };
 }
