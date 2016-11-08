@@ -20,7 +20,7 @@ export default class TodoListItem extends React.Component {
             return (
                 <td>
                     <form onSubmit={ this.onSaveHandler.bind(this) }>
-                        <input ref="updatedTask" type="text" defaultValue = { task } />
+                        <input className = "center-align" ref="updatedTask" type="text" defaultValue = { task } />
                     </form>
                 </td>
             );
@@ -65,16 +65,16 @@ export default class TodoListItem extends React.Component {
         if (this.state.isEditing) {
             return (
                 <td>
-                    <button onClick = { this.onSaveHandler.bind(this) } >Save</button> 
-                    <button onClick = { this.onCancelClickHandler.bind(this) } > Cancel </button>
+                    <button className="btn waves-effect waves-light" onClick = { this.onSaveHandler.bind(this) } >Save</button>
+                    <button className="btn waves-effect waves-light margin-l-10" onClick = { this.onCancelClickHandler.bind(this) } > Cancel </button>
                 </td>
             );
         }
 
         return (
             <td>
-                <button onClick = { this.onEditClickHandler.bind(this) } >Edit</button>
-                <button onClick = { this.onDeleteClickHandler.bind(this) } >Delete</button>
+                <button className="btn waves-effect waves-light" onClick = { this.onEditClickHandler.bind(this) } >Edit</button>
+                <button className="btn waves-effect waves-light margin-l-10" onClick = { this.onDeleteClickHandler.bind(this) } >Delete</button>
             </td>
         );
     }

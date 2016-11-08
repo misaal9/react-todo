@@ -19,6 +19,7 @@
   "homepage": "https://github.com/misaal9/react-todo#readme",
   "dependencies": {
     "lodash": "^4.16.6",
+    "materialize-css": "^0.97.8",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
   },

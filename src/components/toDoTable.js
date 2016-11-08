@@ -68,7 +68,7 @@ export default class ToDoTable extends React.Component {
         return (
             <div>    
                 <CreateTodo createTodo = { this.onCreateTodoHandler.bind(this) }/>
-                <table>
+                <table className="highlight centered bordered">
                     <ToDoHeader />
                     <ToDoList saveTask = { this.saveTask.bind(this) } deleteTask = { this.deleteTask.bind(this) } toggleStatus = { this.toggleStatus.bind(this) } todos = { this.state.todos } />
                 </table>
