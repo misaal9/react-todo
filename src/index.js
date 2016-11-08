@@ -1,2 +1,2 @@
-let msg = "Message";
-console.info(msg);
+let message = "Message 123";
+console.info(message);
