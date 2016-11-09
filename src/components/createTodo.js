@@ -6,10 +6,10 @@ export default class CreateTodo extends React.Component {
             <div className="row">
                 <form onSubmit= { this.onCreateTodoHandler.bind(this) }>
                     <div className="col s9">
-                        <input type="text" ref="createTodoInput" placeholder="Enter new todo" />
+                        <input className = "center-align" type="text" ref="createTodoInput" placeholder="Enter new todo" />
                     </div>
-                    <div className="col s2 push-s1">
-                        <button className="btn-large waves-effect waves-light center-align">Create</button>
+                    <div className="col s3">
+                        <button className="btn waves-effect waves-light center-align btn-block">Create</button>
                     </div>
                 </form>
             </div>

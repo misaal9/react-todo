@@ -5,7 +5,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
-                <h1 className="center-align">Simple ToDo App</h1>
+                <h2 className="center-align">What To Do</h2>
                 <ToDoTable />
             </div>
         );
